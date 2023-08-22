@@ -1,0 +1,310 @@
+ m  <- matrix(
++ c(1,2,3,4,56,7,8,9),
++ nrow = 3,
++ ncol = 3,
++ byrow = FALSE)
+Warning message:
+In matrix(c(1, 2, 3, 4, 56, 7, 8, 9), nrow = 3, ncol = 3, byrow = FALSE) :
+  data length [8] is not a sub-multiple or multiple of the number of rows [3]
+> c(1,2,3,4,5,6,7,8,9),
+Error: unexpected ',' in "c(1,2,3,4,5,6,7,8,9),"
+> m  <- matrix(
++ c(1,2,3,4,5,6,7,8,9),
++ nrow = 3,
++ ncol = 3,
++ byrow = FALSE)
+> rownames(m) = c("a","b","c")
+> colnames(m) = c("d","e","f")
+> print(m)
+  d e f
+a 1 4 7
+b 2 5 8
+c 3 6 9
+>  m  <- matrix(
++ + c(1,2,3,4,5,6,7,8,9),
++ + nrow = 3,
+Error: unexpected '=' in:
+"+ c(1,2,3,4,5,6,7,8,9),
++ nrow ="
+> + ncol = 3,
+Error: unexpected ',' in "+ ncol = 3,"
+> + byrow = FALSE)
+Error: unexpected ')' in "+ byrow = FALSE)"
+> > rownames(m) = c("a","b","c")
+Error: unexpected '>' in ">"
+>  m  <- matrix(
++ c(1,2,3,4,5,6,7,8,9),
++ nrow = 3,
++ ncol = 3,
++  byrow = TRUE)
+> > rownames(m) = c("a","b","c")
+Error: unexpected '>' in ">"
+> rownames(m) = c("a","b","c")
+> colnames(m) = c("d","e","f")
+> print(m)
+  d e f
+a 1 2 3
+b 4 5 6
+c 7 8 9
+> a = c(1,2,3,4,5)
+> b = c("as",asd","awe")
+Error: unexpected string constant in "b = c("as",asd",""
+> b = c("as","asd","awe")
+> ab = c(a,b)
+> print(ab)
+[1] "1"   "2"   "3"   "4"   "5"   "as"  "asd" "awe"
+> cat(a + b)
+Error in a + b : non-numeric argument to binary operator
+> print(a + b)
+Error in a + b : non-numeric argument to binary operator
+> typeof(ab)
+[1] "character"
+> cat(25 %% 5)
+0> a = 50
+> b = 10
+> c = a + b
+> c1 = a-b
+> c3 = a * b
+> c4   = a /b
+> c5 = a%%7
+> cat("addition:",c1)
+addition: 40> cat("substraction:",c2,"\n")
+Error: object 'c2' not found
+> cat("substraction:",c1,"\n")
+substraction: 40 
+> a = 11
+> b = 23
+> print(a+b)
+[1] 34
+> print(a-b)
+[1] -12
+> print(a*b)
+[1] 253
+> print(a/b)
+[1] 0.4782609
+> print(a%%b)
+[1] 11
+> a <- c(12,43,567,78 )
+> b <- c(32,44,12,32)
+> c = a+b
+> print(c)
+[1]  44  87 579 110
+> d = a - b
+> print(d)
+[1] -20  -1 555  46
+> e = a * b
+> print(e)
+[1]  384 1892 6804 2496
+> g = a / b
+> print(g)
+[1]  0.3750000  0.9772727 47.2500000  2.4375000
+> g = a %% b
+> print(g)
+[1] 12 43  3 14
+> g = a %/% b
+> print(g)
+[1]  0  0 47  2
+> name <- c("sam","ram","sita","gita","sity","priya","gungan")
+> l <- c(TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE)
+> name[l]
+[1] "sam"  "sita" "gita"
+> l <- c(TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE)
+> name[l]
+[1] "sam"  "sita" "gita" NA    
+> name <- c("sam","ram","sita","gita","sity","priya","gungan","aaa","bbbb")
+> l <- c(TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE)
+> name[l]
+[1] "sam"  "sita" "gita" "aaa"  "bbbb"
+> name <- c("sam","ram","sita","gita","sity","priya","gungan","aaa","bbbb")
+> name[4]
+[1] "gita"
+> name[-4]
+[1] "sam"    "ram"    "sita"   "sity"   "priya"  "gungan" "aaa"    "bbbb"  
+> name[78]
+[1] NA
+> name <- c("sam","ram","sita","gita","sity","priya","gungan","aaa","bbbb")
+> name[c(5,7,1,2,43)]
+[1] "sity"   "gungan" "sam"    "ram"    NA      
+> name <- c("sam","ram","sita","gita","sity","priya","gungan","aaa","bbbb")
+> name[1:4]
+[1] "sam"  "ram"  "sita" "gita"
+> name[1:10]
+ [1] "sam"    "ram"    "sita"   "gita"   "sity"   "priya"  "gungan" "aaa"    "bbbb"   NA      
+> name[1:15]
+ [1] "sam"    "ram"    "sita"   "gita"   "sity"   "priya"  "gungan" "aaa"    "bbbb"   NA       NA       NA       NA       NA       NA      
+> name <- c("sam","ram","sita","gita","sity","priya","gungan","aaa","bbbb")
+> name[(2,1,4,6,54,3)]
+Error: unexpected ',' in "name[(2,"
+> name[(2,1)]
+Error: unexpected ',' in "name[(2,"
+> name <- c("sam","ram","sita","gita","sity","priya","gungan","aaa","bbbb")
+> name[(1,4,2,4)]
+Error: unexpected ',' in "name[(1,"
+> name[c(1,4,2,4)]
+[1] "sam"  "gita" "ram"  "gita"
+> num <- (1,2,3,4,2,1,11,3,2)
+Error: unexpected ',' in "num <- (1,"
+> num <- c(1,2,3,4,2,1,11,3,2)
+> a = 912,32,11,45,43,11,67)
+Error: unexpected ',' in "a = 912,"
+> a = c(12,32,11,45,43,11,67)
+> print(a[6])
+[1] 11
+> print(a[6,5,1,3])
+Error in a[6, 5, 1, 3] : incorrect number of dimensions
+> print(a[c(6,5,1,3)])
+[1] 11 43 12 11
+> a = c(12,32,11,45,43,11,67)
+> print(a[a <= 30])
+[1] 12 11 11
+> s = seq(1,8,length.out=2)
+> print(s)
+[1] 1 8
+> s = seq(1,8,length.out=6)
+> print(s)
+[1] 1.0 2.4 3.8 5.2 6.6 8.0
+> s = seq(1,8,length.out=4)
+> print(s)
+[1] 1.000000 3.333333 5.666667 8.000000
+> s = seq(1,8,length.out=10)
+> print(s)
+ [1] 1.000000 1.777778 2.555556 3.333333 4.111111 4.888889 5.666667 6.444444 7.222222 8.000000
+> print(1.777778 + 1.777778)
+[1] 3.555556
+> s = seq(1,4,length.out=5)
+> print(s)
+[1] 1.00 1.75 2.50 3.25 4.00
+> s = seq(1,4,length.out=10)
+> print(s)
+ [1] 1.000000 1.333333 1.666667 2.000000 2.333333 2.666667 3.000000 3.333333 3.666667 4.000000
+> c = c("sam"=101,"ram"=102,"sita"=103)
+> cat("caracter veactor:",c["ram"])
+caracter veactor: 102> cat("caracter veactor:",c["ram"],"\n")
+caracter veactor: 102 
+> a  <- c(1,2,3,4,5,6)
+> a[c(TRUE,FALSE,FALSE,TURE)]
+Error: object 'TURE' not found
+> a[c(TRUE,FALSE,FALSE,TRUE)]
+[1] 1 4 5
+> name <- c("sdcklajfnsklanf","dsfsfggfdgfdG")
+> print(name)
+[1] "sdcklajfnsklanf" "dsfsfggfdgfdG"  
+> names(name) = c("first_row","second_row")
+> print(name)
+        first_row        second_row 
+"sdcklajfnsklanf"   "dsfsfggfdgfdG" 
+> name <- c("sdcklajfnsklanf","dsfsfggfdgfdG","fsdgfsgdrfghgbythnbtnjt","rfgdrgdrfg")
+> names(name) = c("first_row","second_row","third_row","forst_row")
+> print(name)
+                first_row                second_row                 third_row                 forst_row 
+        "sdcklajfnsklanf"           "dsfsfggfdgfdG" "fsdgfsgdrfghgbythnbtnjt"              "rfgdrgdrfg" 
+> li = list("red","fdsfsdf",32,14,1421)
+> print(li)
+[[1]]
+[1] "red"
+
+[[2]]
+[1] "fdsfsdf"
+
+[[3]]
+[1] 32
+
+[[4]]
+[1] 14
+
+[[5]]
+[1] 1421
+
+> li[3]
+[[1]]
+[1] 32
+
+> li[1,2]
+Error in li[1, 2] : incorrect number of dimensions
+> li[c(1,2)]
+[[1]]
+[1] "red"
+
+[[2]]
+[1] "fdsfsdf"
+
+> names(li) = c(1,2)
+> li
+$`1`
+[1] "red"
+
+$`2`
+[1] "fdsfsdf"
+
+$<NA>
+[1] 32
+
+$<NA>
+[1] 14
+
+$<NA>
+[1] 1421
+
+> names(li) = c(1,2,3,4)
+> li
+$`1`
+[1] "red"
+
+$`2`
+[1] "fdsfsdf"
+
+$`3`
+[1] 32
+
+$`4`
+[1] 14
+
+$<NA>
+[1] 1421
+
+> li <- list(c("Ram","sham","raj"),matric(c(10,20,30,40,50,60,70,80),nrow = 2),list("BCA","MCA","MSC"))
+Error in matric(c(10, 20, 30, 40, 50, 60, 70, 80), nrow = 2) : 
+  could not find function "matric"
+> li <- list(c("Ram","sham","raj"),matrix(c(10,20,30,40,50,60,70,80),nrow = 2),list("BCA","MCA","MSC"))
+> print(li)
+[[1]]
+[1] "Ram"  "sham" "raj" 
+
+[[2]]
+     [,1] [,2] [,3] [,4]
+[1,]   10   30   50   70
+[2,]   20   40   60   80
+
+[[3]]
+[[3]][[1]]
+[1] "BCA"
+
+[[3]][[2]]
+[1] "MCA"
+
+[[3]][[3]]
+[1] "MSC"
+
+
+> names(li) <- c("student","marks","Course")
+> print(li)
+$student
+[1] "Ram"  "sham" "raj" 
+
+$marks
+     [,1] [,2] [,3] [,4]
+[1,]   10   30   50   70
+[2,]   20   40   60   80
+
+$Course
+$Course[[1]]
+[1] "BCA"
+
+$Course[[2]]
+[1] "MCA"
+
+$Course[[3]]
+[1] "MSC"
+
+
+> 
