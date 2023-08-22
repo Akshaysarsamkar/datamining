@@ -1,109 +1,115 @@
- m  <- matrix(
-+ c(1,2,3,4,56,7,8,9),
-+ nrow = 3,
-+ ncol = 3,
-+ byrow = FALSE)
-Warning message:
-In matrix(c(1, 2, 3, 4, 56, 7, 8, 9), nrow = 3, ncol = 3, byrow = FALSE) :
-  data length [8] is not a sub-multiple or multiple of the number of rows [3]
-> c(1,2,3,4,5,6,7,8,9),
-Error: unexpected ',' in "c(1,2,3,4,5,6,7,8,9),"
-> m  <- matrix(
-+ c(1,2,3,4,5,6,7,8,9),
-+ nrow = 3,
-+ ncol = 3,
-+ byrow = FALSE)
-> rownames(m) = c("a","b","c")
-> colnames(m) = c("d","e","f")
-> print(m)
+---create matrix in R programing with False byrow----
+<---- first example --->
+m  <- matrix(
+c(1,2,3,4,56,7,8,9),
+nrow = 3,
+ncol = 3,
+byrow = FALSE 
+)
+
+<--- second example --->
+
+m<- matrix(
+c(1,2,3,4,5,6,7,8,9),
+nrow = 3,
+ncol = 3,
+byrow = FALSE 
+)
+rownames(m) = c("a","b","c")
+colnames(m) = c("d","e","f")
+print(m)
+<----- out put ---->
   d e f
 a 1 4 7
 b 2 5 8
 c 3 6 9
->  m  <- matrix(
-+ + c(1,2,3,4,5,6,7,8,9),
-+ + nrow = 3,
-Error: unexpected '=' in:
-"+ c(1,2,3,4,5,6,7,8,9),
-+ nrow ="
-> + ncol = 3,
-Error: unexpected ',' in "+ ncol = 3,"
-> + byrow = FALSE)
-Error: unexpected ')' in "+ byrow = FALSE)"
-> > rownames(m) = c("a","b","c")
-Error: unexpected '>' in ">"
->  m  <- matrix(
-+ c(1,2,3,4,5,6,7,8,9),
-+ nrow = 3,
-+ ncol = 3,
-+  byrow = TRUE)
-> > rownames(m) = c("a","b","c")
-Error: unexpected '>' in ">"
-> rownames(m) = c("a","b","c")
-> colnames(m) = c("d","e","f")
-> print(m)
+
+<----create matrix in R programing with True byrow ---->
+<---- first example ---->
+m  <- matrix(
+c(1,2,3,4,5,6,7,8,9),
+nrow = 3,
+ncol = 3,
+byrow = TRUE)
+rownames(m) = c("a","b","c")
+colnames(m) = c("d","e","f")
+print(m)
+
+<---- output ---->
   d e f
 a 1 2 3
 b 4 5 6
 c 7 8 9
-> a = c(1,2,3,4,5)
-> b = c("as",asd","awe")
-Error: unexpected string constant in "b = c("as",asd",""
-> b = c("as","asd","awe")
-> ab = c(a,b)
-> print(ab)
+
+<------- 1:-combining two vector ------>
+b = c("as","asd","awe")
+ab = c(a,b)
+print(ab)
+
+<----- output ----->
 [1] "1"   "2"   "3"   "4"   "5"   "as"  "asd" "awe"
-> cat(a + b)
+
+<----- tye using + operator combine vector ------>
+cat(a + b)
 Error in a + b : non-numeric argument to binary operator
-> print(a + b)
+
+
+print(a + b)
 Error in a + b : non-numeric argument to binary operator
-> typeof(ab)
-[1] "character"
-> cat(25 %% 5)
-0> a = 50
-> b = 10
-> c = a + b
-> c1 = a-b
-> c3 = a * b
-> c4   = a /b
-> c5 = a%%7
-> cat("addition:",c1)
-addition: 40> cat("substraction:",c2,"\n")
-Error: object 'c2' not found
-> cat("substraction:",c1,"\n")
-substraction: 40 
-> a = 11
-> b = 23
-> print(a+b)
+
+
+<---- Arithmetic operation ----->
+a = 11
+b = 23
+
+print(a+b)
 [1] 34
-> print(a-b)
+
+print(a-b)
 [1] -12
-> print(a*b)
+
+print(a*b)
 [1] 253
-> print(a/b)
+
+print(a/b)
 [1] 0.4782609
-> print(a%%b)
+
+print(a%%b) #modular operator
 [1] 11
-> a <- c(12,43,567,78 )
-> b <- c(32,44,12,32)
-> c = a+b
-> print(c)
+
+<---- vector arithmetic operator ------>
+a <- c(12,43,567,78 )
+b <- c(32,44,12,32)
+
+c = a+b
+print(c)
 [1]  44  87 579 110
-> d = a - b
-> print(d)
+
+d = a - b
+print(d)
 [1] -20  -1 555  46
-> e = a * b
-> print(e)
+
+
+e = a * b
+print(e)
 [1]  384 1892 6804 2496
-> g = a / b
-> print(g)
+
+
+g = a / b
+print(g)
 [1]  0.3750000  0.9772727 47.2500000  2.4375000
-> g = a %% b
-> print(g)
+
+
+g = a %% b
+print(g)
 [1] 12 43  3 14
-> g = a %/% b
-> print(g)
+
+
+g = a %/% b
+print(g)
 [1]  0  0 47  2
+
+
 > name <- c("sam","ram","sita","gita","sity","priya","gungan")
 > l <- c(TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE)
 > name[l]
