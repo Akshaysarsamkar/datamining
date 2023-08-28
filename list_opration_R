@@ -1,0 +1,1076 @@
+
+> a  = c(1,2,3,4,5)
+> b  = c(11,21,31,42,51)
+> c = a +  b
+> c
+[1] 12 23 34 46 56
+> c1 = a *  b
+> c1
+[1]  11  42  93 168 255
+> c2 = a /  b
+> c2
+[1] 0.09090909 0.09523810 0.09677419 0.09523810 0.09803922
+> 
+> vec  = c(25,85,4,65,21,11)
+> sort(vec)
+[1]  4 11 21 25 65 85
+> 
+> li  = list("RAj","Sam","Ram","Sita")
+> li
+[[1]]
+[1] "RAj"
+
+[[2]]
+[1] "Sam"
+
+[[3]]
+[1] "Ram"
+
+[[4]]
+[1] "Sita"
+
+> li[5] = "Akshay"
+> li
+[[1]]
+[1] "RAj"
+
+[[2]]
+[1] "Sam"
+
+[[3]]
+[1] "Ram"
+
+[[4]]
+[1] "Sita"
+
+[[5]]
+[1] "Akshay"
+
+> li[-3]
+[[1]]
+[1] "RAj"
+
+[[2]]
+[1] "Sam"
+
+[[3]]
+[1] "Sita"
+
+[[4]]
+[1] "Akshay"
+
+> li1  = list("RAj","Sam","Ram","Sita")
+> sortlist = lapply(li1,sort)
+> sortlist
+[[1]]
+[1] "RAj"
+
+[[2]]
+[1] "Sam"
+
+[[3]]
+[1] "Ram"
+
+[[4]]
+[1] "Sita"
+
+> sortlist = lapply(li1,sort,decreasing=TRUE)
+> sortlist
+[[1]]
+[1] "RAj"
+
+[[2]]
+[1] "Sam"
+
+[[3]]
+[1] "Ram"
+
+[[4]]
+[1] "Sita"
+
+> li1  = list("RAj","Sam","Ram","Sita")
+> li2 = c(li1)
+> li2 = sort(li2)
+Error in sort.int(x, na.last = na.last, decreasing = decreasing, ...) : 
+  'x' must be atomic
+> li2
+[[1]]
+[1] "RAj"
+
+[[2]]
+[1] "Sam"
+
+[[3]]
+[1] "Ram"
+
+[[4]]
+[1] "Sita"
+
+> typeof(li2)
+[1] "list"
+> li1  = c("RAj","Sam","Ram","Sita")
+> li2  = sort(li1)
+> li2 = list(li1)
+> li2
+[[1]]
+[1] "RAj"  "Sam"  "Ram"  "Sita"
+
+> li1  = c("a","d","b")
+> li2  = sort(li1)
+> li2 = list(li1)
+> li2
+[[1]]
+[1] "a" "d" "b"
+
+> typeof(li1)
+[1] "character"
+> typeof(li2)
+[1] "list"
+> table <- function(){
++ for}
+Error: unexpected '}' in:
+"table <- function(){
+for}"
+> li = list(c("sam","raj","pankaj","sijit"))
+> v <- lapply(li,sort)
+> v
+[[1]]
+[1] "pankaj" "raj"    "sam"    "sijit" 
+
+> table <- function(){
++ for (i in range(1,11){
+Error: unexpected '{' in:
+"table <- function(){
+for (i in range(1,11){"
+> table <- function(){
++ for (i in 1:10){
++ print(2 * i)}
++ }
+> table()
+[1] 2
+[1] 4
+[1] 6
+[1] 8
+[1] 10
+[1] 12
+[1] 14
+[1] 16
+[1] 18
+[1] 20
+> a = c(1,2)
+> names[a] = c("first","second")
+Error in names[a] = c("first", "second") : 
+  object of type 'builtin' is not subsettable
+> names(a) = c("first","second")
+> a
+ first second 
+     1      2 
+> li = list(c(1,2,3,4,5,6),matrix(c(1,2,3,4,5,6,7,8,9),nrow=3),"sam")
+> li
+[[1]]
+[1] 1 2 3 4 5 6
+
+[[2]]
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+
+[[3]]
+[1] "sam"
+
+> li = list(c(1,2,3,4,5,6),matrix(c(1,2,3,4,5,6,7,8,9),nrow=3),"sam",array(1,2,3,4,5,6,7))
+Error in array(1, 2, 3, 4, 5, 6, 7) : unused arguments (4, 5, 6, 7)
+> li = list(c(1,2,3,4,5,6),matrix(c(1,2,3,4,5,6,7,8,9),nrow=3),"sam",array(c(1,2,3,4,5,6,7)))
+> li
+[[1]]
+[1] 1 2 3 4 5 6
+
+[[2]]
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+
+[[3]]
+[1] "sam"
+
+[[4]]
+[1] 1 2 3 4 5 6 7
+
+> li = list(c(1,2,3,4,5,6),matrix(c(1,2,3,4,5,6,7,8,9),nrow=3),"sam",array(c(1,2,3,4,5,6,7)),data.frame("a":c(1,2,3,4,5,6),"d":c(1,2,3,4,5)))
+Error in "a":c(1, 2, 3, 4, 5, 6) : NA/NaN argument
+In addition: Warning messages:
+1: In "a":c(1, 2, 3, 4, 5, 6) :
+  numerical expression has 6 elements: only the first used
+2: In data.frame("a":c(1, 2, 3, 4, 5, 6), "d":c(1, 2, 3, 4, 5)) :
+  NAs introduced by coercion
+> li = list(c(1,2,3,4,5,6),matrix(c(1,2,3,4,5,6,7,8,9),nrow=3),"sam",array(c(1,2,3,4,5,6,7)),data.frame("a":c(1,2,3,4,5,6),"d":c(1,2,3,4,5,6)))
+Error in "a":c(1, 2, 3, 4, 5, 6) : NA/NaN argument
+In addition: Warning messages:
+1: In "a":c(1, 2, 3, 4, 5, 6) :
+  numerical expression has 6 elements: only the first used
+2: In data.frame("a":c(1, 2, 3, 4, 5, 6), "d":c(1, 2, 3, 4, 5, 6)) :
+  NAs introduced by coercion
+> li = list(c(1,2,3,4,5,6),matrix(c(1,2,3,4,5,6,7,8,9),nrow=3),"sam",array(c(1,2,3,4,5,6,7))
++ )
+> li
+[[1]]
+[1] 1 2 3 4 5 6
+
+[[2]]
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+
+[[3]]
+[1] "sam"
+
+[[4]]
+[1] 1 2 3 4 5 6 7
+
+> li[3]
+[[1]]
+[1] "sam"
+
+> li[2]
+[[1]]
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+
+> li[4]
+[[1]]
+[1] 1 2 3 4 5 6 7
+
+> print(li[-1])
+[[1]]
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+
+[[2]]
+[1] "sam"
+
+[[3]]
+[1] 1 2 3 4 5 6 7
+
+> li[4] = 21
+> print(li)
+[[1]]
+[1] 1 2 3 4 5 6
+
+[[2]]
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+
+[[3]]
+[1] "sam"
+
+[[4]]
+[1] 21
+
+> li[] = 21
+> print(li)
+[[1]]
+[1] 21
+
+[[2]]
+[1] 21
+
+[[3]]
+[1] 21
+
+[[4]]
+[1] 21
+
+> li = list(c(1,2,3,4,5,6),matrix(c(1,2,3,4,5,6,7,8,9),nrow=3),"sam",array(c(1,2,3,4,5,6,7))
++ print(li[-1])
+Error: unexpected symbol in:
+"li = list(c(1,2,3,4,5,6),matrix(c(1,2,3,4,5,6,7,8,9),nrow=3),"sam",array(c(1,2,3,4,5,6,7))
+print"
+> print(li[-1])
+[[1]]
+[1] 21
+
+[[2]]
+[1] 21
+
+[[3]]
+[1] 21
+
+> li[4] = 21
+> print(li)
+[[1]]
+[1] 21
+
+[[2]]
+[1] 21
+
+[[3]]
+[1] 21
+
+[[4]]
+[1] 21
+
+> li[1]
+[[1]]
+[1] 21
+
+> li[2]
+[[1]]
+[1] 21
+
+> li = list(c(1,2,3,4,5,6),matrix(c(1,2,3,4,5,6,7,8,9),nrow=3),"sam",array(c(1,2,3,4,5,6,7))
++ li[2]
+Error: unexpected symbol in:
+"li = list(c(1,2,3,4,5,6),matrix(c(1,2,3,4,5,6,7,8,9),nrow=3),"sam",array(c(1,2,3,4,5,6,7))
+li"
+> li[2]
+[[1]]
+[1] 21
+
+> print(li[-1])
+[[1]]
+[1] 21
+
+[[2]]
+[1] 21
+
+[[3]]
+[1] 21
+
+> li = list(c(1,2,3,4,5,6),matrix(c(1,2,3,4,5,6,7,8,9),nrow=3),"sam",array(c(1,2,3,4,5,6,7))
++ li[2]
+Error: unexpected symbol in:
+"li = list(c(1,2,3,4,5,6),matrix(c(1,2,3,4,5,6,7,8,9),nrow=3),"sam",array(c(1,2,3,4,5,6,7))
+li"
+> li[2]
+[[1]]
+[1] 21
+
+> li = list(c(1,2,3,4,5,6),matrix(c(1,2,3,4,5,6,7,8,9),nrow=3),"sam",array(c(1,2,3,4,5,6,7))
++ )
+> names(li) = c("first","second","third","forth")
+> li
+$first
+[1] 1 2 3 4 5 6
+
+$second
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+
+$third
+[1] "sam"
+
+$forth
+[1] 1 2 3 4 5 6 7
+
+> a  = c(1,2,3,4,5)
+> b = c(11,22,33,44,55)
+> df = data.frame(a,b)
+> df
+  a  b
+1 1 11
+2 2 22
+3 3 33
+4 4 44
+5 5 55
+> a  = array(c(1,2,3,4,5,6))
+> a
+[1] 1 2 3 4 5 6
+> a  = array(c(1,2,3,4,5,6),c(1,2,3,4,5))
+> a
+, , 1, 1, 1
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 1, 1
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 1, 1
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 2, 1
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 2, 1
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 2, 1
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 3, 1
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 3, 1
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 3, 1
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 4, 1
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 4, 1
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 4, 1
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 1, 2
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 1, 2
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 1, 2
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 2, 2
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 2, 2
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 2, 2
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 3, 2
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 3, 2
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 3, 2
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 4, 2
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 4, 2
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 4, 2
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 1, 3
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 1, 3
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 1, 3
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 2, 3
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 2, 3
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 2, 3
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 3, 3
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 3, 3
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 3, 3
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 4, 3
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 4, 3
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 4, 3
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 1, 4
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 1, 4
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 1, 4
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 2, 4
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 2, 4
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 2, 4
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 3, 4
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 3, 4
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 3, 4
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 4, 4
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 4, 4
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 4, 4
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 1, 5
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 1, 5
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 1, 5
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 2, 5
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 2, 5
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 2, 5
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 3, 5
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 3, 5
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 3, 5
+
+     [,1] [,2]
+[1,]    5    6
+
+, , 1, 4, 5
+
+     [,1] [,2]
+[1,]    1    2
+
+, , 2, 4, 5
+
+     [,1] [,2]
+[1,]    3    4
+
+, , 3, 4, 5
+
+     [,1] [,2]
+[1,]    5    6
+
+
+
+
+> m = matrix(c(1,2,3,4,5,6,7,8,9),nrow=3 ,ncol = 3,byrow=TRUE)
+> m
+     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    4    5    6
+[3,]    7    8    9
+> rownames(m) = c("f_row","s_row","t_row")
+> colnames(m) = c("f_col","s_col","t_col")
+> m
+      f_col s_col t_col
+f_row     1     2     3
+s_row     4     5     6
+t_row     7     8     9
+> m1 = matrix(c(1,2,3,4,5,6),nrow=2 ,ncol =3,byrow=TRUE)
+> m
+      f_col s_col t_col
+f_row     1     2     3
+s_row     4     5     6
+t_row     7     8     9
+> m1
+     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    4    5    6
+> li = list(c(1,2,3,4,5),list(1,2,3,4),"adsadas")
+> names(li) = c("first","second","third")
+> li
+$first
+[1] 1 2 3 4 5
+
+$second
+$second[[1]]
+[1] 1
+
+$second[[2]]
+[1] 2
+
+$second[[3]]
+[1] 3
+
+$second[[4]]
+[1] 4
+
+
+$third
+[1] "adsadas"
+
+> li["first"]
+$first
+[1] 1 2 3 4 5
+
+> li[first]
+Error: object 'first' not found
+> li["first"]
+$first
+[1] 1 2 3 4 5
+
+> li["second"]
+$second
+$second[[1]]
+[1] 1
+
+$second[[2]]
+[1] 2
+
+$second[[3]]
+[1] 3
+
+$second[[4]]
+[1] 4
+
+
+> li = list(c(1,2,3,4,5),list(1,2,3,4),"adsadas",matric(c(1,2,3,4,5,6,7,8),nrow=2))
+Error in matric(c(1, 2, 3, 4, 5, 6, 7, 8), nrow = 2) : 
+  could not find function "matric"
+> li = list(c(1,2,3,4,5),list(1,2,3,4),"adsadas",matrix(c(1,2,3,4,5,6,7,8),nrow=2))
+> names(li) = c("first","second","third","forth")
+> li[first]
+Error: object 'first' not found
+> li["first"]
+$first
+[1] 1 2 3 4 5
+
+> li["second"]
+$second
+$second[[1]]
+[1] 1
+
+$second[[2]]
+[1] 2
+
+$second[[3]]
+[1] 3
+
+$second[[4]]
+[1] 4
+
+
+> li["forth"]
+$forth
+     [,1] [,2] [,3] [,4]
+[1,]    1    3    5    7
+[2,]    2    4    6    8
+
+> li[5] = "hello_dm"
+> li
+$first
+[1] 1 2 3 4 5
+
+$second
+$second[[1]]
+[1] 1
+
+$second[[2]]
+[1] 2
+
+$second[[3]]
+[1] 3
+
+$second[[4]]
+[1] 4
+
+
+$third
+[1] "adsadas"
+
+$forth
+     [,1] [,2] [,3] [,4]
+[1,]    1    3    5    7
+[2,]    2    4    6    8
+
+[[5]]
+[1] "hello_dm"
+
+> li[5] = NULL
+> li
+$first
+[1] 1 2 3 4 5
+
+$second
+$second[[1]]
+[1] 1
+
+$second[[2]]
+[1] 2
+
+$second[[3]]
+[1] 3
+
+$second[[4]]
+[1] 4
+
+
+$third
+[1] "adsadas"
+
+$forth
+     [,1] [,2] [,3] [,4]
+[1,]    1    3    5    7
+[2,]    2    4    6    8
+
+> li[1] = "UPDATE"
+> li
+$first
+[1] "UPDATE"
+
+$second
+$second[[1]]
+[1] 1
+
+$second[[2]]
+[1] 2
+
+$second[[3]]
+[1] 3
+
+$second[[4]]
+[1] 4
+
+
+$third
+[1] "adsadas"
+
+$forth
+     [,1] [,2] [,3] [,4]
+[1,]    1    3    5    7
+[2,]    2    4    6    8
+
+> li[1]
+$first
+[1] "UPDATE"
+
+> li[1] = array(c(1,2,3,4,5,6),nrow=2)
+Error in array(c(1, 2, 3, 4, 5, 6), nrow = 2) : 
+  unused argument (nrow = 2)
+> li[1] = array(c(1,2,3,4,5,6),nrow=3)
+Error in array(c(1, 2, 3, 4, 5, 6), nrow = 3) : 
+  unused argument (nrow = 3)
+> li[1] = c(1,2,3,4)
+Warning message:
+In li[1] = c(1, 2, 3, 4) :
+  number of items to replace is not a multiple of replacement length
+> li[1] = c(1)
+> li
+$first
+[1] 1
+
+$second
+$second[[1]]
+[1] 1
+
+$second[[2]]
+[1] 2
+
+$second[[3]]
+[1] 3
+
+$second[[4]]
+[1] 4
+
+
+$third
+[1] "adsadas"
+
+$forth
+     [,1] [,2] [,3] [,4]
+[1,]    1    3    5    7
+[2,]    2    4    6    8
+
+> li[2] = array(c(1,2,3,4,5,6),nrow=3)
+Error in array(c(1, 2, 3, 4, 5, 6), nrow = 3) : 
+  unused argument (nrow = 3)
+> li[2] = array(c(1,2,3,4,5,6))
+Warning message:
+In li[2] = array(c(1, 2, 3, 4, 5, 6)) :
+  number of items to replace is not a multiple of replacement length
+> li[2] = array(c(1))
+> li
+$first
+[1] 1
+
+$second
+[1] 1
+
+$third
+[1] "adsadas"
+
+$forth
+     [,1] [,2] [,3] [,4]
+[1,]    1    3    5    7
+[2,]    2    4    6    8
+
+> li[5] = list(1,2,3,4)
+Warning message:
+In li[5] = list(1, 2, 3, 4) :
+  number of items to replace is not a multiple of replacement length
+> li[6] = list(1,2,3,4)
+Warning message:
+In li[6] = list(1, 2, 3, 4) :
+  number of items to replace is not a multiple of replacement length
+> li
+$first
+[1] 1
+
+$second
+[1] 1
+
+$third
+[1] "adsadas"
+
+$forth
+     [,1] [,2] [,3] [,4]
+[1,]    1    3    5    7
+[2,]    2    4    6    8
+
+[[5]]
+[1] 1
+
+[[6]]
+[1] 1
+
+> li[6] = list(c(1,2,3,4))
+> li
+$first
+[1] 1
+
+$second
+[1] 1
+
+$third
+[1] "adsadas"
+
+$forth
+     [,1] [,2] [,3] [,4]
+[1,]    1    3    5    7
+[2,]    2    4    6    8
+
+[[5]]
+[1] 1
+
+[[6]]
+[1] 1 2 3 4
+
+> li[7] = c(1,2,3,4)
+Warning message:
+In li[7] = c(1, 2, 3, 4) :
+  number of items to replace is not a multiple of replacement length
+> list1 = list(1:5)
+> list1
+[[1]]
+[1] 1 2 3 4 5
+
+> list2 = list(6:10)
+> list2
+[[1]]
+[1]  6  7  8  9 10
+
+> v1<-unlist(list1)
+> v2<-unlist(list2)
+> list1
+[[1]]
+[1] 1 2 3 4 5
+
+> list2
+[[1]]
+[1]  6  7  8  9 10
+
+> res<- v1 + v2
+> print(res)
+[1]  7  9 11 13 15
+> v = c(1)
+> v4 =c(1,2,3,4,5,6,7)
+> res1 = v4 + v
+> res1
+[1] 2 3 4 5 6 7 8
+> typrof(res)
+Error in typrof(res) : could not find function "typrof"
+> typeof(res)
+[1] "integer"
+> res1 = v1 %/% v2
+> res1
+[1] 0 0 0 0 0
+> v1
+[1] 1 2 3 4 5
+> v2
+[1]  6  7  8  9 10
+> res1 = v1 %/% v2
+> res1
+[1] 0 0 0 0 0
+> res2 = v1 %% v2
+> res2
+[1] 1 2 3 4 5
+> res3 = v2 %/% v1
+> res3
+[1] 6 3 2 2 2
+> res4 = v2 / v1
+> res4
+[1] 6.000000 3.500000 2.666667 2.250000 2.000000
+> res5 = v2 * v1
+> res5
+[1]  6 14 24 36 50
+> res6 = v2 - v1
+> res6
+[1] 5 5 5 5 5
+> li = list(1,2,3,4)
+> li1 = list(11,22,33,44)
+> li3 = c(list1,list2)
+> li3
+[[1]]
+[1] 1 2 3 4 5
+
+[[2]]
+[1]  6  7  8  9 10
+
+> grear
+Error: object 'grear' not found
+> cat(li1)
+Error in cat(li1) : argument 1 (type 'list') cannot be handled by 'cat'
+> cat("FgffdgFD"Gd)
+Error: unexpected symbol in "cat("FgffdgFD"Gd"
+> cat("FgffdgFD")
+FgffdgFD> cat(li3)
+Error in cat(li3) : argument 1 (type 'list') cannot be handled by 'cat'
+> 
