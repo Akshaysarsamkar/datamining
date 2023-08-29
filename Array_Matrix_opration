@@ -1,0 +1,170 @@
+v1 = c(21,11,34,32,54)
+v2 = c(5,3,2,1,4)
+
+res<- array(c(v1,v2),dim=c(2,5,1))
+res
+v3 = c(21,11,34,32,54,66,12,89,32)
+v4 = c(1,2,3,4,5,6,7,8,9)
+res1 <- array(c(v3,v4),dim=c(6,3,2))
+res1
+res1 <- array(c(v3,v4),dim=c(6,2,4))
+res1
+vec1 <- c(1,2,3)
+vec2 <- c(10,21,21,1,221,2)
+column.names <- c("col1","col2","col3")
+row.names <- c("row1","row2","row3")
+matrix.names<-c("matrix1","matrix2")
+arr = array(c(vec1,vec2),dim=c(3,3,2),dimnames=list(row.names,column.names,matrix.names))
+print(arr)
+cat("access Array Element\n")
+cat("first row second column\n")
+print(arr[1,,2])
+cat("1st row 3rd column of first matrix\n")
+print(arr[1,2,1])
+print(arr[,,2])
+print(arr[2,1,2])
+print(arr[2,,2])
+print(arr[2,8,2])
+print(arr[1])
+print(arr[,2,1])
+print(arr[4,,1])
+print(arr[2,,1])
+cat("Matrix creation:\n")
+mat = matrix(
+c(11,22,33,44,55,66),
+nrow = 3,
+ncol = 2,
+byrow = True
+)
+mat = matrix(
+c(11,22,33,44,55,66),
+byrow = True
+nrow = 3,
+mat = matrix(
+c(11,22,33,44,55,66),
+nrow = 3,
+ncol = 2,
+byrow = TRUE)
+mat
+mat = matrix(
+c(1:5),
+nrow = 3,
+ncol = 2,
+byrow = TRUE)
+mar
+mat
+rownames(mat) = c("row1","row2",row3")
+colnames(mat) = c("col1","col2","col3")
+rownames(mat) = c("row1","row2","row3")
+colnames(mat) = c("col1","col2","col3")
+colnames(mat) = c("col1","col2")
+mat
+rownames = v("a","b",c","d")
+rownames = v("a","b","c","d")
+rownames = c("a","b","c","d")
+colnames = c("d","d","e","e")
+colnames = c("d","d","e")
+p <- matrix(c(1:12),nrow=4,byrow = TRUE,dimnames = list(rownames,colnames))
+p
+cat("Acces matrix element")
+p[2,1]
+p[,1]
+p[2,]
+p[2,4]
+p[2,1]
+p[4,]
+p[,3]
+cat("Arithmatic operation\n")
+m1 = matrix(c(1:9),nrow=3,byrow=TRUE)
+m1 = matrix(c(1:12),nrow=3,ncol=4,byrow=TRUE)
+m3 = m1 + m2
+m1 = matrix(c(1:12),nrow=3,ncol=4,byrow=TRUE)
+m2 = matrix(c(1:9),nrow=3,byrow=TRUE)
+m3 = m1 + m2
+m1 = matrix(c(1:9),nrow=3,byrow=TRUE)
+m2 = matrix(c(4),nrow=3,byrow=TRUE)
+m2 = matrix(c(4,8,9,4,2,1,6,14,2),nrow=3,byrow=TRUE)
+m3 = m1 + m2
+m3
+sub <- m2 - m1
+sub
+sub1 = m1 - m2
+sub1
+mul1 = m1 * m2
+mul1
+div = m1 / m2
+div
+div1 = m2 / m1
+div1
+modular1 = m2 %% m1
+modular1
+modular2 = m1 %% m2
+modular2 
+intmodular2 = m1 %/% m2
+intmodular2 
+intmodular1 = m2 %/% m1
+intmodular1 
+rev <- function(){
+int num = 345
+num = 345l
+num = 345L
+rev <- function(){
+num = 345L
+for(i in num){
+    int rem = 
+rev <- function(){
+num = 345L
+while(num > 0){
+}
+}
+rev <- function(){
+num = 345L
+rem = 0L
+rev = 0L
+while(num > 0){
+  rem = rem %/% 10;
+  rev = }}
+rev <- function(){
+num = 345L
+rev = 0L
+while(num > 0){
+int rem = num % 10
+rev <- function(){
+}
+rev();
+v <- c("12,34,56,78,65)
+v <- c(12,34,56,78,65)
+")
+v <- c(12,34,56,78,65)
+v1 <-c("a","b","c","d","e")
+df = data.frame(v1,v2)
+df
+df = data.frame(v1,v)
+df
+rev <- function(){
+int num = 432L
+rev <- function(){
+num = 345L
+rev = 0L
+while(num > 0){
+rem = num %/% 10
+rev = rev * 10 + rem
+num = num / 10
+}
+print(rev)
+}
+rev()
+ typeof(rev)
+rev <- function(){num = 345L
+ rev = 0L
+sum = 0
+while(num > 0){
+rem = num %/% 10
+sum = sum + rem
+print(sum)
+rev = rev * 10 + rem
+num = num / 10
+}
+}
+rev()
+q()
