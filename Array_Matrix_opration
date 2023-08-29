@@ -141,30 +141,38 @@ df = data.frame(v1,v2)
 df
 df = data.frame(v1,v)
 df
-rev <- function(){
-int num = 432L
-rev <- function(){
-num = 345L
-rev = 0L
-while(num > 0){
-rem = num %/% 10
-rev = rev * 10 + rem
-num = num / 10
-}
-print(rev)
-}
-rev()
- typeof(rev)
-rev <- function(){num = 345L
- rev = 0L
-sum = 0
-while(num > 0){
-rem = num %/% 10
-sum = sum + rem
-print(sum)
-rev = rev * 10 + rem
-num = num / 10
-}
-}
-rev()
-q()
+
+
+ emp.Data <- data.frame(
++ rno = c(1:5),
++ Stu_name = c("Akshay","Sujit","karan","sandip","pradip"),
++ sal = c(1111,3333,2222,5555,444),
++ s_date = as.Date(c("2000-02-01","2000-02-01","2000-02-01","2000-02-01","2000-02-01")),
++ stringsAsFactors = FALSE)
+> emp.Data
+  rno Stu_name  sal     s_date
+1   1   Akshay 1111 2000-02-01
+2   2    Sujit 3333 2000-02-01
+3   3    karan 2222 2000-02-01
+4   4   sandip 5555 2000-02-01
+5   5   pradip  444 2000-02-01
+> df <- data.frame(
++ team=c("a","b","c","d","e"),
++ points=c(12,32,12,45,65),
++ assi = c(33,44,55,12,21),
++ rebound =c(1,2,3,4,5))
+> df
+  team points assi rebound
+1    a     12   33       1
+2    b     32   44       2
+3    c     12   55       3
+4    d     45   12       4
+5    e     65   21       5
+> final <- data.frame(df$assi,df$points)
+> final
+  df.assi df.points
+1      33        12
+2      44        32
+3      55        12
+4      12        45
+5      21        65
