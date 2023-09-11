@@ -299,7 +299,363 @@ Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2
 + col="green",
 + border="gray"
 + ,horizontal=TRUE,
+
+
+
+> 
+> 
+> 
+> m <- matrix(c(1,2,3,4,5,6,7,8,9),nrow=3)
+> m1 <- matrix(c(1,2,3,4,5,6,7,8,9),nrow=3)
+> m3 <- m1 + m2
+> m1
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+> m2
+     [,1] [,2] [,3]
+[1,]    4    8    9
+[2,]    4    2    1
+[3,]    6   14    2
+> m3
+     [,1] [,2] [,3]
+[1,]    5   12   16
+[2,]    6    7    9
+[3,]    9   20   11
+> m3 <- m + m1
+> m3
+     [,1] [,2] [,3]
+[1,]    2    8   14
+[2,]    4   10   16
+[3,]    6   12   18
+> 
+> 
+> m1 <- matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,byrows=True)
+Error in matrix(c(1, 2, 3, 4, 5, 6, 7, 8, 9), nrow = 3, byrows = True) : 
+  unused argument (byrows = True)
+> m1 <- matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,byrows=TRUE)
+Error in matrix(c(1, 2, 3, 4, 5, 6, 7, 8, 9), nrow = 3, byrows = TRUE) : 
+  unused argument (byrows = TRUE)
+> m1 <- matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,byrow=TRUE)
+> m2 <- matrix(c(17,82,323,142,51,61,71,82,91),nrow=3,byrow=TRUE)
+> m1
+     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    4    5    6
+[3,]    7    8    9
+> m2
+     [,1] [,2] [,3]
+[1,]   17   82  323
+[2,]  142   51   61
+[3,]   71   82   91
+> m3 = m1 + m2
+> m3
+     [,1] [,2] [,3]
+[1,]   18   84  326
+[2,]  146   56   67
+[3,]   78   90  100
+> 
+> 
+> #vection addtion multipication
+> c<-c(1,2,4,7,9)
+> c1 = c(2,4,6,8)
+> 
+> a = c+ c1
+Warning message:
+In c + c1 : longer object length is not a multiple of shorter object length
+> c1<-c(1,2,4,7,9)
+> c1 = c(2,4,6,8,10)
+> c<-c(1,2,4,7,9)
+> c1 = c(2,4,6,8,10)
+> a=c+c1
+> a
+[1]  3  6 10 15 19
+> a=c-c1
+> a
+[1] -1 -2 -2 -1 -1
+> a=c*c1
+> a
+[1]  2  8 24 56 90
+> a=c/c1
+> a
+[1] 0.5000000 0.5000000 0.6666667 0.8750000 0.9000000
+> a=c//c1
+Error: unexpected '/' in "a=c//"
+> a=c/%/c1
+Error: unexpected input in "a=c/%/c1"
+> a=c%/%c1
+> a
+[1] 0 0 0 0 0
+> 
+> f1 = factor(1,2,3,4)
+> f2 = factor(4,3,6,7,8)
+> f3 = c(f1,f2)
+> f3
+[1] <NA> <NA>
+Levels: 3 6
+> f1 = factor(1,2,3,4)
+> f2 = factor(1,2,3)
+> f3 = c(f1,f2)
+> f3
+[1] <NA> <NA>
+Levels: 3
+> 
+> 
+> num <- as.integer(readline(prompt="please enter a number"))
+please enter a number7
+> for(t in 1:10){
++ print(paste(num, '*' ,t '=' ,num*t))} 
+Error: unexpected string constant in:
+"for(t in 1:10){
+print(paste(num, '*' ,t '='"
+> for(t in 1:10){
++ print(paste(num * t)) 
++ }
+[1] "7"
+[1] "14"
+[1] "21"
+[1] "28"
+[1] "35"
+[1] "42"
+[1] "49"
+[1] "56"
+[1] "63"
+[1] "70"
+> 
+> for(t in 432){
++ n = n %% 10;
++ sum = sum + n;
++ }
+Error: object 'n' not found
+> num = 123
+> sum = 0
+> rev =0
+> while(num > 0){
++ r = num %% 10;
++ sum = sum + r
++ rev = rev * 10 + r
++ num =num %% 10
++ }
+
+
 + notch = TRUE)
 >  boxplot(m,main="Mean Ozone in part per billion at Roosevelt Island",xlab="Parts per billion",
 + ylab="Ozone", col="orange", border="brown",horizontal=TRUE,notch = TRUE)
+> 
+
+
+> num=123
+> sum=0
+> rev=0
+> while(num>0)
++ {
++     r=num %% 10
++     sum=sum+r
++     rev=rev*10+r
++     num=num %/% 10
++ }
+> print(paste("Reverse number is:",rev))
+[1] "Reverse number is: 321"
+> print(paste("Sum of digit is:",sum))
+[1] "Sum of digit is: 6"
+> 
+> first = c(1,2,3,4,5,6,7,8,9)
+> first = c(1,2,3,4,1,4,5)
+> sec = c(10,20,30,40,10,40,50)
+> df = data.frame(first,sec)
+> df
+  first sec
+1     1  10
+2     2  20
+3     3  30
+4     4  40
+5     1  10
+6     4  40
+7     5  50
+> 
+> df[dublicated[df$first]]
+Error: object 'dublicated' not found
+> df[duplicated(df),]
+  first sec
+5     1  10
+6     4  40
+> sum =0
+> mean=0
+> for(i in 1:100){
++ if(i >=20 && i<= 60){
++ mean = mean + i}
++ if(}
+Error: unexpected '}' in:
+"mean = mean + i}
+if(}"
+> sum =0
+> mean=0
+> for(i in 1:100){
++ if(i>= 20 && i<= 50){
++ mean = mean + i
++ }
++ if(i>=51 && i<=91){
++ sum = sum + 1)
+Error: unexpected ')' in:
+"if(i>=51 && i<=91){
+sum = sum + 1)"
+>  sum =0
+> mean=0
+> for(i in 1:100){
++ if(i>= 20 && i<= 50){
++ mean = mean + i
++ }
++ if(i>=51 && i<=91){
++  sum = sum + 1
++ }
++ if(i<=50){
++   print(i)
++ }
++ }
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] 10
+[1] 11
+[1] 12
+[1] 13
+[1] 14
+[1] 15
+[1] 16
+[1] 17
+[1] 18
+[1] 19
+[1] 20
+[1] 21
+[1] 22
+[1] 23
+[1] 24
+[1] 25
+[1] 26
+[1] 27
+[1] 28
+[1] 29
+[1] 30
+[1] 31
+[1] 32
+[1] 33
+[1] 34
+[1] 35
+[1] 36
+[1] 37
+[1] 38
+[1] 39
+[1] 40
+[1] 41
+[1] 42
+[1] 43
+[1] 44
+[1] 45
+[1] 46
+[1] 47
+[1] 48
+[1] 49
+[1] 50
+> print(sum)
+[1] 41
+>  sum =0
+> mean=0
+> for(i in 1:100){
++ if(i>= 20 && i<= 50){
++ mean = mean + i
++ }
++ if(i>=51 && i<=91){
++  sum = sum + i
++ }
++ if(i<=50){
++   print(i)
++ }
++ }
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] 10
+[1] 11
+[1] 12
+[1] 13
+[1] 14
+[1] 15
+[1] 16
+[1] 17
+[1] 18
+[1] 19
+[1] 20
+[1] 21
+[1] 22
+[1] 23
+[1] 24
+[1] 25
+[1] 26
+[1] 27
+[1] 28
+[1] 29
+[1] 30
+[1] 31
+[1] 32
+[1] 33
+[1] 34
+[1] 35
+[1] 36
+[1] 37
+[1] 38
+[1] 39
+[1] 40
+[1] 41
+[1] 42
+[1] 43
+[1] 44
+[1] 45
+[1] 46
+[1] 47
+[1] 48
+[1] 49
+[1] 50
+> sum
+[1] 2911
+> mean / 30
+[1] 36.16667
+> f1 = 0
+> 
+> f1 = 0
+> f2 = 1
+> f3 = 0
+> 
+> print(f1)
+[1] 0
+> print(f2)
+[1] 1
+> for(i in 1:10){
++   f3 = f1 + f2
++   print(f3)
++   f1 = f2
++   f2 = f3
++ }
+[1] 1
+[1] 2
+[1] 3
+[1] 5
+[1] 8
+[1] 13
+[1] 21
+[1] 34
+[1] 55
+[1] 89
 > 
