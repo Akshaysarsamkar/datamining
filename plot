@@ -659,3 +659,15 @@ sum = sum + 1)"
 [1] 55
 [1] 89
 > 
+> f = factor(1:10)
+> f1 = factor(1:10)
+> 
+> a <- factor(c(f,f1),class)
+Error in match(levels, exclude) : 'match' requires vector arguments
+> a <- factor(c(f,f1),class)
+Error in match(levels, exclude) : 'match' requires vector arguments
+> a <- factor(c(f,f1))
+> a
+ [1] 1  2  3  4  5  6  7  8  9  10 1  2  3  4  5  6  7  8  9  10
+Levels: 1 2 3 4 5 6 7 8 9 10
+> 
