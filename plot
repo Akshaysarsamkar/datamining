@@ -401,17 +401,14 @@ Levels: 3 6
 [1] <NA> <NA>
 Levels: 3
 > 
-> 
-> num <- as.integer(readline(prompt="please enter a number"))
+
+
+<----- multiplication table -------->
+num <- as.integer(readline(prompt="please enter a number"))
 please enter a number7
-> for(t in 1:10){
-+ print(paste(num, '*' ,t '=' ,num*t))} 
-Error: unexpected string constant in:
-"for(t in 1:10){
-print(paste(num, '*' ,t '='"
-> for(t in 1:10){
-+ print(paste(num * t)) 
-+ }
+for(t in 1:10){
+print(paste(num * t)) 
+}
 [1] "7"
 [1] "14"
 [1] "21"
@@ -422,49 +419,31 @@ print(paste(num, '*' ,t '='"
 [1] "56"
 [1] "63"
 [1] "70"
-> 
-> for(t in 432){
-+ n = n %% 10;
-+ sum = sum + n;
-+ }
-Error: object 'n' not found
-> num = 123
-> sum = 0
-> rev =0
-> while(num > 0){
-+ r = num %% 10;
-+ sum = sum + r
-+ rev = rev * 10 + r
-+ num =num %% 10
-+ }
 
-
-+ notch = TRUE)
->  boxplot(m,main="Mean Ozone in part per billion at Roosevelt Island",xlab="Parts per billion",
-+ ylab="Ozone", col="orange", border="brown",horizontal=TRUE,notch = TRUE)
-> 
-
-
-> num=123
-> sum=0
-> rev=0
-> while(num>0)
-+ {
-+     r=num %% 10
-+     sum=sum+r
-+     rev=rev*10+r
-+     num=num %/% 10
-+ }
-> print(paste("Reverse number is:",rev))
+<------ reverse number and sum of digit  ------->
+num=123
+sum=0
+rev=0
+while(num>0)
+{
+   r=num %% 10
+    sum=sum+r
+   rev=rev*10+r
+num=num %/% 10
+}
+print(paste("Reverse number is:",rev))
 [1] "Reverse number is: 321"
-> print(paste("Sum of digit is:",sum))
+print(paste("Sum of digit is:",sum))
 [1] "Sum of digit is: 6"
-> 
-> first = c(1,2,3,4,5,6,7,8,9)
-> first = c(1,2,3,4,1,4,5)
-> sec = c(10,20,30,40,10,40,50)
-> df = data.frame(first,sec)
-> df
+
+
+<----- duplicated element in data frame ------->
+first = c(1,2,3,4,5,6,7,8,9)
+first = c(1,2,3,4,1,4,5)
+sec = c(10,20,30,40,10,40,50)
+df = data.frame(first,sec)
+df
+
   first sec
 1     1  10
 2     2  20
@@ -473,46 +452,31 @@ Error: object 'n' not found
 5     1  10
 6     4  40
 7     5  50
-> 
-> df[dublicated[df$first]]
-Error: object 'dublicated' not found
-> df[duplicated(df),]
+
+df[duplicated(df),]
+
+<---- output  ----->
   first sec
 5     1  10
 6     4  40
-> sum =0
-> mean=0
-> for(i in 1:100){
-+ if(i >=20 && i<= 60){
-+ mean = mean + i}
-+ if(}
-Error: unexpected '}' in:
-"mean = mean + i}
-if(}"
-> sum =0
-> mean=0
-> for(i in 1:100){
-+ if(i>= 20 && i<= 50){
-+ mean = mean + i
-+ }
-+ if(i>=51 && i<=91){
-+ sum = sum + 1)
-Error: unexpected ')' in:
-"if(i>=51 && i<=91){
-sum = sum + 1)"
->  sum =0
-> mean=0
-> for(i in 1:100){
-+ if(i>= 20 && i<= 50){
-+ mean = mean + i
-+ }
-+ if(i>=51 && i<=91){
-+  sum = sum + 1
-+ }
-+ if(i<=50){
-+   print(i)
-+ }
-+ }
+
+
+
+<----- question ---->
+sum =0
+mean=0
+for(i in 1:100){
+if(i>= 20 && i<= 50){
+mean = mean + i
+ }
+if(i>=51 && i<=91){
+   sum = sum + 1
+}
+if(i<=50){
+   print(i)
+ }
+}
+
 [1] 1
 [1] 2
 [1] 3
@@ -628,26 +592,28 @@ sum = sum + 1)"
 [1] 48
 [1] 49
 [1] 50
-> sum
+sum
 [1] 2911
-> mean / 30
+mean / 30
 [1] 36.16667
-> f1 = 0
-> 
-> f1 = 0
-> f2 = 1
-> f3 = 0
-> 
-> print(f1)
+
+
+
+<------ Fibonacci series -------->
+f1 = 0
+f2 = 1
+f3 = 0
+
+print(f1)
 [1] 0
-> print(f2)
+print(f2)
 [1] 1
-> for(i in 1:10){
-+   f3 = f1 + f2
-+   print(f3)
-+   f1 = f2
-+   f2 = f3
-+ }
+for(i in 1:10){
+   f3 = f1 + f2
+   print(f3)
+   f1 = f2
+   f2 = f3
+}
 [1] 1
 [1] 2
 [1] 3
@@ -658,7 +624,9 @@ sum = sum + 1)"
 [1] 34
 [1] 55
 [1] 89
-> 
+
+
+
 > f = factor(1:10)
 > f1 = factor(1:10)
 > 
