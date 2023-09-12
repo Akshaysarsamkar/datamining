@@ -932,3 +932,15 @@ Error in pirnt(f3) : could not find function "pirnt"
 [1] 10946
 > 
 > 
+
+ year = c(2001,2002,2003)
+> export = c(24,32,35)
+> inport <- c(35,40,50)
+> 
+> barplot(rbind(export,inport))
+> barplot(rbind(export,inport),beside=TRUE)
+> barplot(rbind(export,inport),beside=TRUE,xlab="Year",ylab="Value")
+> barplot(rbind(export,inport),beside=TRUE,xlab="Year",ylab="Value",names.arg = year)
+> barplot(rbind(export,inport),beside=TRUE,xlab="Year",ylab="Value",names.arg = year,col=c("red","blue"))
+> 
+
