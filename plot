@@ -639,3 +639,296 @@ Error in match(levels, exclude) : 'match' requires vector arguments
  [1] 1  2  3  4  5  6  7  8  9  10 1  2  3  4  5  6  7  8  9  10
 Levels: 1 2 3 4 5 6 7 8 9 10
 > 
+
+>  name <- c("Akshay","Ram","Sham","Raj","Karan")
+>  eid <- c(1,2,3,4,5)
+>  des <- c("Html_developer","php_developer","java_devloper","c++_developer","UI_devloper")
+> adds   <- c("pune","mumbai","pune","pune","Beed")
+> df <- data.frame(eid,name,des,adds)
+> df
+  eid   name            des   adds
+1   1 Akshay Html_developer   pune
+2   2    Ram  php_developer mumbai
+3   3   Sham  java_devloper   pune
+4   4    Raj  c++_developer   pune
+5   5  Karan    UI_devloper   Beed
+> 
+> 
+> vec <- c(12,13,21,1,2)
+> 
+> min = vec[1]
+> max = vec[1]
+> 
+> for(i in vec){
++      if (i> max)
++          {
++           max = i
++         }
++     if (i < min)
++          {
++             min = i
++         }
++ }
+> cat("maximum element is:\n")
+maximum element is:
+> print(max)
+[1] 21
+> 
+> cat("minmum element is:\n")
+minmum element is:
+> print(min)
+[1] 1
+> 
+> 
+> 
+>  eno <- c(1,2,3,4,5)
+> name <- c("Akshay","Ram","Sham","Raj","Karan")
+> gender <- ("Male","Male","Male","Male","Male")
+Error: unexpected ',' in "gender <- ("Male","
+> age <- (34,23,44,34,21)
+Error: unexpected ',' in "age <- (34,"
+>  des <- c("Html_developer","php_developer","java_devloper","c++_developer","UI_devloper")
+> 
+> 
+> gender <- ("Male","Male","Male","Male","Male")
+Error: unexpected ',' in "gender <- ("Male","
+> 
+> 
+>  eno <- c(1,2,3,4,5)
+> name <- c("Akshay","Ram","Sham","Raj","Karan")
+> gender <- c("Male","Male","Male","Male","Male")
+> age <-c (34,23,44,34,21)
+>  des <- c("Html_developer","php_developer","java_devloper","c++_developer","UI_devloper")
+> 
+> emp = data.frame(eno,name,gender,age,des)
+> emp
+  eno   name gender age            des
+1   1 Akshay   Male  34 Html_developer
+2   2    Ram   Male  23  php_developer
+3   3   Sham   Male  44  java_devloper
+4   4    Raj   Male  34  c++_developer
+5   5  Karan   Male  21    UI_devloper
+> 
+> 
+> 
+> digit <- c(1,2,3,4,5,6)
+> feq <- c(7,2,6,3,4,8)
+> 
+> pie(digit.feq)
+Error: object 'digit.feq' not found
+> lebles <- c(7,2,6,3,4,8)
+> pie(digit,lebles)
+> 
+> 
+> emp.summary()
+Error in emp.summary() : could not find function "emp.summary"
+> summary(emp)
+      eno        name              gender               age      
+ Min.   :1   Length:5           Length:5           Min.   :21.0  
+ 1st Qu.:2   Class :character   Class :character   1st Qu.:23.0  
+ Median :3   Mode  :character   Mode  :character   Median :34.0  
+ Mean   :3                                         Mean   :31.2  
+ 3rd Qu.:4                                         3rd Qu.:34.0  
+ Max.   :5                                         Max.   :44.0  
+     des           
+ Length:5          
+ Class :character  
+ Mode  :character  
+                   
+                   
+                   
+> summary(df)
+      eid        name               des                adds          
+ Min.   :1   Length:5           Length:5           Length:5          
+ 1st Qu.:2   Class :character   Class :character   Class :character  
+ Median :3   Mode  :character   Mode  :character   Mode  :character  
+ Mean   :3                                                           
+ 3rd Qu.:4                                                           
+ Max.   :5                                                           
+> 
+> 
+> emp
+  eno   name gender age            des
+1   1 Akshay   Male  34 Html_developer
+2   2    Ram   Male  23  php_developer
+3   3   Sham   Male  44  java_devloper
+4   4    Raj   Male  34  c++_developer
+5   5  Karan   Male  21    UI_devloper
+> 
+> emp$name
+[1] "Akshay" "Ram"    "Sham"   "Raj"    "Karan" 
+> 
+> name <- list("Akshay","Ram","Sham","Raj","Karan")
+> 
+> name[6] = "sunny"
+> name
+[[1]]
+[1] "Akshay"
+
+[[2]]
+[1] "Ram"
+
+[[3]]
+[1] "Sham"
+
+[[4]]
+[1] "Raj"
+
+[[5]]
+[1] "Karan"
+
+[[6]]
+[1] "sunny"
+
+> name[-3]
+[[1]]
+[1] "Akshay"
+
+[[2]]
+[1] "Ram"
+
+[[3]]
+[1] "Raj"
+
+[[4]]
+[1] "Karan"
+
+[[5]]
+[1] "sunny"
+
+> 
+> list1 = list("x"."y","z")
+Error: unexpected symbol in "list1 = list("x"."
+> list1 = list("x","y","z")
+> list2 = list("x","y","z","x","y","z")
+> 
+> c(list1,list2)
+[[1]]
+[1] "x"
+
+[[2]]
+[1] "y"
+
+[[3]]
+[1] "z"
+
+[[4]]
+[1] "x"
+
+[[5]]
+[1] "y"
+
+[[6]]
+[1] "z"
+
+[[7]]
+[1] "x"
+
+[[8]]
+[1] "y"
+
+[[9]]
+[1] "z"
+
+> setdiff(list1,list2)
+list()
+> list2 = list(c("x","y","z","x","y","z"))
+> list1 = list(c("x","y","z"))
+> setdiff(list1,list2)
+[[1]]
+[1] "x" "y" "z"
+
+> barplot(x = c(2001,2002,2003),y = c(26,32,35),xlab="Year",ylab="Export",main="Year_wise_Export_import")
+Error in barplot.default(x = c(2001, 2002, 2003), y = c(26, 32, 35), xlab = "Year",  : 
+  argument 1 matches multiple formal arguments
+> year = c(2001,2002,2003)
+> Export <- c(26,32,35)
+> 
+> barplot(year,Export,xlab="Year",ylab="Export",main="Year_wise_Export_import")
+> barplot(year,Export,xlab="Year",ylab="Export",main="Year_wise_Export_import",col="orange",border="brown")
+> barplot(Export,year,xlab="Year",ylab="Export",main="Year_wise_Export_import",col="orange",border="brown")
+> 
+> f1 = 0
+> f2 = 2
+>    pirnt(f1)
+Error in pirnt(f1) : could not find function "pirnt"
+>    pirnt(f2)
+Error in pirnt(f2) : could not find function "pirnt"
+> for(i in 1:20)
++ {
++     f3 = f1 + f2
++    pirnt(f3)
++    f1 = f2
++    f2 = f3
++ }
+Error in pirnt(f3) : could not find function "pirnt"
+> 
+> f1 = 0
+> f2 = 2
+>    print(f1)
+[1] 0
+>    print(f2)
+[1] 2
+> for(i in 1:20)
++ {
++     f3 = f1 + f2
++    print(f3)
++    f1 = f2
++    f2 = f3
++ }
+[1] 2
+[1] 4
+[1] 6
+[1] 10
+[1] 16
+[1] 26
+[1] 42
+[1] 68
+[1] 110
+[1] 178
+[1] 288
+[1] 466
+[1] 754
+[1] 1220
+[1] 1974
+[1] 3194
+[1] 5168
+[1] 8362
+[1] 13530
+[1] 21892
+> 
+> f1 = 0
+> f2 = 1
+>    print(f1)
+[1] 0
+>    print(f2)
+[1] 1
+> for(i in 1:20)
++ {
++     f3 = f1 + f2
++    print(f3)
++    f1 = f2
++    f2 = f3
++ }
+[1] 1
+[1] 2
+[1] 3
+[1] 5
+[1] 8
+[1] 13
+[1] 21
+[1] 34
+[1] 55
+[1] 89
+[1] 144
+[1] 233
+[1] 377
+[1] 610
+[1] 987
+[1] 1597
+[1] 2584
+[1] 4181
+[1] 6765
+[1] 10946
+> 
+> 
