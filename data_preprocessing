@@ -15,3 +15,69 @@ print(data.head())
 2  Germany  30.0  54000.0        No
 3    Spain  38.0  61000.0        No
 4  Germany  40.0      NaN       Yes
+
+
+#extract the data
+data["Age"] 
+
+0    44.0
+1    27.0
+2    30.0
+3    38.0
+4    40.0
+5    35.0
+6     NaN
+7    48.0
+8    50.0
+9    37.0
+Name: Age, dtype: float64
+
+
+data.loc[(data['Country'] == 'Spain') & (data['Purchased'] == 'No')]
+	Country	Age	Salary	Purchased
+3	Spain	38.0	61000.0	No
+6	Spain	NaN	52000.0	No
+
+
+data.iloc[1,1]
+data.iloc[1,1]
+data.iloc[1,1]
+27.0
+
+data.iloc[0,0]
+'France'
+
+data.iloc[0:4,2:5]
+Salary	Purchased
+0	72000.0	No
+1	48000.0	Yes
+2	54000.0	No
+3	61000.0	No
+
+data.iloc[2:4,0:2]
+Country	Age
+2	Germany	30.0
+3	Spain	38.0
+
+
+data.isnull()
+	Country	Age	Salary	Purchased
+0	False	False	False	False
+1	False	False	False	False
+2	False	False	False	False
+3	False	False	False	False
+4	False	False	True	False
+5	False	False	False	False
+6	False	True	False	False
+7	False	False	False	False
+8	False	False	False	False
+9	False	False	False	False
+
+
+data.isnull().sum()
+Country      0
+Age          1
+Salary       1
+Purchased    0
+dtype: int64
+
