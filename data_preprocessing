@@ -81,3 +81,19 @@ Salary       1
 Purchased    0
 dtype: int64
 
+
+#no of row and column
+print(data.shape)
+(8, 4)
+
+#delete rows with missing values
+data.dropna(inplace=True)
+print(data.isnull().sum())
+print(data.shape)
+
+Country      0
+Age          0
+Salary       0
+Purchased    0
+dtype: int64
+(8, 4)
