@@ -97,3 +97,13 @@ Salary       0
 Purchased    0
 dtype: int64
 (8, 4)
+
+data['Age'][0:10]0    44.0
+1    27.0
+2    30.0
+3    38.0
+5    35.0
+7    48.0
+8    50.0
+9    37.0
+Name: Age, dtype: float64
