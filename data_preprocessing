@@ -1,0 +1,17 @@
+#import library
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+
+
+#read csv file
+data = pd.read_csv("C:/Users/bca 2023/data.csv")
+
+print(data.head())
+
+     Country   Age   Salary Purchased
+0   France  44.0  72000.0        No
+1    Spain  27.0  48000.0       Yes
+2  Germany  30.0  54000.0        No
+3    Spain  38.0  61000.0        No
+4  Germany  40.0      NaN       Yes
