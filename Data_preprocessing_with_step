@@ -1,0 +1,139 @@
+<--------- Import Library ----------->
+import pandas as pd
+import numpy as np
+import seaborn as sns
+
+<--------- Import DataSet ----------->
+df = pd.DataFrame({
+   'outlook' : [
+"Sunny",
+"Sunny",
+"Overcast",
+"Rain",
+"Rain",
+"Rain",
+"Overcast",
+"Sunny",
+"Sunny",
+"Rain",
+"Sunny",
+"Overcast",
+"Overcast",
+"Rain" ],
+
+'Temperature' : [
+"Hot",
+"Hot",
+"Hot",
+"Mild",
+"Cool",
+"Cool",
+"Cool",
+"Mild",
+"Cool",
+"Mild",
+"Mild",
+"Mild",
+"Hot",
+"Mild"],
+
+'Humidity' : [
+"High",
+"High",
+"High",
+"High",
+"Normal",
+"Normal",
+"Normal",
+"High",
+"Normal",
+"Normal",
+"Normal",
+"High",
+"Normal",
+"High"
+],
+
+'Wind': [
+"Weak",
+"Strong",
+"Weak",
+"Weak",
+"Weak",
+"Strong",
+"Strong",
+"Weak",
+"Weak",
+"Weak",
+"Strong",
+"Strong",
+"Weak",
+"Strong"
+],
+
+'PlayTennis': [
+"No",
+"No",
+"Yes",
+"Yes",
+"Yes",
+"No",
+"Yes",
+"No",
+"Yes",
+"Yes",
+"Yes",
+"Yes",
+"Yes",
+"No"
+]
+
+})
+print (df) 
+
+
+<--------- Extracting Dependents and Independent Variable --------->
+x = df.iloc[:, :-1].values
+y = df. iloc[:,4].values
+#y = df.PlayTennis.values
+print(x) 
+print(y) 
+
+<------------ Manageing Missing Data ------------>
+from sklearn.impute import SimpleImputer
+imputer = SimpleImputer(missing_values = np.nan,strategy='mean')
+#imputer. fit(x[:,1:5])
+#x[:,1:5] = imputer.transform(x[:, 1:5])
+
+
+
+<---------- Handing Categorical data ----------->
+from sklearn.preprocessing import LabelEncoder
+encoder_x = LabelEncoder ()
+x[:, 0]= encoder_x.fit_transform (x[:,0])
+#print (x)
+
+x[:,1]= encoder_x.fit_transform (x[:,1])
+x[:,2] = encoder_x.fit_transform (x[:, 2])
+x[:,3]= encoder_x.fit_transform (x[:,3])
+print (x)
+encoder_y = LabelEncoder ()
+encoder_y.fit_transform (y) 
+
+
+<--------- Splitting the Dataset into Training and Testing Datasets --------->
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(x, y,test_size=0.2,random_state=0)
+x_train
+x_test
+y_train
+y_test
+
+
+<--------- Feature Scaling --------->
+from sklearn.preprocessing import StandardScaler
+ts_x = StandardScaler()
+x_train =ts_x.fit_transform(x_train)
+x_train
+x_test = ts_x.transform(x_test)
+x_test
