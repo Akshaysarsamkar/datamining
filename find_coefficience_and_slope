@@ -1,0 +1,25 @@
+import numpy as np
+
+#define the input data(x) and output data (y)
+x = np.array([1,2,3,4,5,6,7,8,9,11,13])
+y = np.array([1,2,3,4,5,6,7,8,9,11,13])
+
+#calculate the mean of x and y
+mean_x = np.mean(x)
+mean_y = np.mean(y)
+
+#claculate the numerator and denomirator
+num = np.sum(x - mean_x * y - mean_y)
+dem = np.sum(x - mean_x ** 2)
+
+#calcualet the slope
+b1 = num / dem
+
+#calcualate the estimation coefficience
+b0 = mean_y - b1 * mean_x
+
+
+#calculate the estimate coefficients
+print("intercept(coefficience)",b0)
+
+print("coefficience(slope)",b1)
