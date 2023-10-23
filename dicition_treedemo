@@ -1,0 +1,32 @@
+import pandas as pd
+import numpy as np
+
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
+
+#load the database
+df = pd.read_csv("diabetes.csv") 
+
+
+#split the data into features(x) nand targets(y)
+x = df.drop('Outcome',axis=1) 
+
+y = df['Outcome']
+y
+
+
+#split the data set int test and train data set
+x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.1,random_state=42)
+
+#Create dicition tree
+clf =  DecisionTreeClassifier(random_state=42) 
+
+clf.fit(x_train,y_train) 
+
+y_pred = clf.predict(x_test)
+
+  y_pred = clf.predict(x_test)
+
+  accuracy = accuracy_score(y_test,y_pred)
+  print(f"Accuracy:{accuracy * 100:.2f}%")
