@@ -1,0 +1,47 @@
+details. 
+
+Employee contain (empno,empname,gender,age,designation) 
+
+Answer: 
+
+Employees = data.frame(empno=c(1,2,3,4,5),
+
+empname=c("Amit S","Dikish R","Shweta J", "Jikita A","Riya M"),
+
+Gender=c("M","M","F","F","F"),
+
+Age=c(23,22,25,26,32),
+
+Designation=c("Clerk","Manager","Exective","CEO","ASSISTANT"))
+
+print("Details of the employees:") 
+
+print(Employees)
+
+Q2. Write a python program to implement multiple Linear Regression model for a car dataset. 
+
+Dataset can be downloaded from: 
+
+https://www.w3schools.com/python/python_ml_multiple_regression.as
+
+Answer: 
+
+import pandas
+
+from sklearn import linear_model
+
+df = pandas.read_csv("car.csv")
+
+X = df[['Weight', 'Volume']]
+
+y = df['CO2']
+
+regr = linear_model.LinearRegression()
+
+regr.fit(X, y)
+
+#predict the CO2 emission of a car where the weight is 2300kg, and the volume is 1300cm3:
+
+predictedCO2 = regr.predict([[2300, 1300]])
+
+print(predictedCO2)
