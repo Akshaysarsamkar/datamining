@@ -1,0 +1,50 @@
+Q1. Write a R program to create a Dataframes which contain details of 5 Students and display the
+
+details. 
+
+Students contain (Rollno,Studname,Address,Marks) 
+
+Answer: 
+Students = data.frame(Rollno=c(21,22,23,24,25),
+
+Name=c("Riya M","Shweta J","Aarya D", "JAMES A","LAURA M"),
+
+Addresss=c("Bhekrai nagar","Hadapsar","Uruli kanchan","Hadapsar","Bhekrai nagar"),
+
+Marks=c(80,67,90,92,70)) 
+
+print("Details of the Students:") 
+
+print(Students)
+
+Q2. Write a python program to implement multiple Linear Regression model for a car dataset. 
+
+Dataset can be downloaded from: 
+
+https://www.w3schools.com/python/python_ml_multiple_regression.asp
+
+Answer: 
+
+import pandas
+
+from sklearn import linear_model
+
+from sklearn.linear_model import LinearRegression
+
+df = pandas.read_csv("car.csv")
+
+X = df[['Weight', 'Volume']]
+
+y = df['CO2']
+
+regr = linear_model.LinearRegression()
+
+regr.fit(X, y)
+
+test_y = regr.predict(X)
+
+#predict the CO2 emission of a car where the weight is 2300kg, and the volume is 1300cm3:
+
+predictedCO2 = regr.predict([[2300, 1300]])
+
+print(predictedCO2
