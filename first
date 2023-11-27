@@ -1,0 +1,82 @@
+Write a R program to add, multiply and divide two vectors of integer type. (Vector length should 
+
+be minimum 4).
+
+Answer: 
+
+vector1 = seq(10,40 , length.out=4)
+
+vector2 = c(20, 10, 40, 40)
+
+print("Original Vectors:")
+
+print(vector1)
+
+print(vector2)
+
+add= vector1+vector2
+
+cat("Sum of vector is ",add, "\n") 
+
+sub_vector= vector1-vector2
+
+cat("Substraction of vector is ",sub_vector, "\n") 
+
+mul_vector= vector1 * vector2
+
+cat("Multiplication of vector is ",mul_vector, "\n") 
+
+print("Division of two Vectors:")
+
+"Division of two Vectors:"
+
+div_vector = vector1 / vector2
+
+print(div_vector)  
+
+
+
+
+Q2.Consider the student data set. It can be downloaded from: 
+
+https://drive.google.com/open?id=1oakZCv7g3mlmCSdv9J8kdSaqO 5_6dIOw . Write a programme 
+
+in python to apply simple linear regression and find out mean absolute error, mean squared error 
+
+and root mean squared error.
+
+Answer: import pandas as pd
+
+import numpy as np
+
+from sklearn.model_selection import train_test_split
+
+from sklearn.linear_model import LinearRegression
+
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+
+# Load the dataset
+
+data = pd.read_csv('student_data.csv')
+
+# Assuming you have two columns: 'independent_variable' and 'dependent_variable'
+
+X = data['independent_variable'].values.reshape(-1, 1)
+y = data['dependent_variable']
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Create a linear regression model
+model = LinearRegression()
+# Fit the model on the training data
+model.fit(X_train, y_train)
+# Predict the values on the test data
+y_pred = model.predict(X_test)
+# Calculate Mean Absolute Error (MAE)
+mae = mean_absolute_error(y_test, y_pred)
+# Calculate Mean Squared Error (MSE)
+mse = mean_squared_error(y_test, y_pred)
+# Calculate Root Mean Squared Error (RMSE)
+rmse = np.sqrt(mse)
+print("Mean Absolute Error:", mae)
+print("Mean Squared Error:", mse)
+print("Root Mean Squared Error:", rmse)
